@@ -8,6 +8,7 @@ namespace RasterFlomaster
 {
     static class Program
     {
+        public static FormOutpurRender render;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,12 @@ namespace RasterFlomaster
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            render = new FormOutpurRender();
+            Application.Run(render);
+        }
+        public static void Setup(this ref float me, float val)
+        {
+            me = val;
         }
     }
 }
